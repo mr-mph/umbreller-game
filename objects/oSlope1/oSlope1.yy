@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oSlope1",
   "spriteId": {
-    "name": "sWall",
-    "path": "sprites/sWall/sWall.yy",
+    "name": "sSlope_left",
+    "path": "sprites/sSlope_left/sSlope_left.yy",
   },
   "solid": false,
   "visible": true,

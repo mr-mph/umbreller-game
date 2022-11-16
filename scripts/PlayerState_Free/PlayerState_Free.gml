@@ -5,16 +5,18 @@ function PlayerState_Free(){
 Walk();
 Jump();
 
-//Horizontal Collisions [ORIGINAL] 
-//if (place_meeting(x+hsp,y,oWall))
-//{
-//	while (!place_meeting(x+sign(hsp),y,oWall))
-//	{
-//		x = x + sign(hsp);
-//	}
-//	hsp = 0;
-//}
-//x = x + hsp;
+/*
+Horizontal Collisions [ORIGINAL] 
+if (place_meeting(x+hsp,y,oWall))
+{
+	while (!place_meeting(x+sign(hsp),y,oWall))
+	{
+		x = x + sign(hsp);
+	}
+	hsp = 0;
+}
+x = x + hsp;
+*/
 
 // Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
