@@ -10,6 +10,8 @@ coyote_time_max = 5;
 multiplier_walk = 1;
 multiplier_run = 1.5;
 
+collide_list = oWall
+
 function OnGround(_obj)
 {
 	if place_meeting(x,y+1,_obj)
@@ -22,13 +24,13 @@ function OnGround(_obj)
 function CoyoteTime()
 {
 	if coyote_time > 0 coyote_time --;
-	if OnGround(oWall)
+	if OnGround(collide_list)
 	{
 		coyote_time = coyote_time_max
 	}
 }
 
-OnGround(oWall);
+OnGround(collide_list);
 
 state = PLAYERSTATE.FREE;
 hitByAttack = ds_list_create()

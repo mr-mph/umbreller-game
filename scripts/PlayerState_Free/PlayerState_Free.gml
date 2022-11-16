@@ -7,9 +7,9 @@ Jump();
 
 /*
 Horizontal Collisions [ORIGINAL] 
-if (place_meeting(x+hsp,y,oWall))
+if (place_meeting(x+hsp,y,collide_list))
 {
-	while (!place_meeting(x+sign(hsp),y,oWall))
+	while (!place_meeting(x+sign(hsp),y,collide_list))
 	{
 		x = x + sign(hsp);
 	}
@@ -21,18 +21,18 @@ x = x + hsp;
 // Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
     // Move up slope
-    if (place_meeting(x + sign(hsp), y, oWall) && place_meeting(x + sign(hsp), y - 1, oWall) && !place_meeting(x + sign(hsp), y - 2, oWall))
+    if (place_meeting(x + sign(hsp), y, collide_list) && place_meeting(x + sign(hsp), y - 1, collide_list) && !place_meeting(x + sign(hsp), y - 2, collide_list))
         y -= 2;
-    else if (place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y - 1, oWall))
+    else if (place_meeting(x + sign(hsp), y, collide_list) && !place_meeting(x + sign(hsp), y - 1, collide_list))
         --y;
     
     // Move down slope
-    if (!place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y + 1, oWall) && !place_meeting(x + sign(hsp), y + 2, oWall) && place_meeting(x + sign(hsp), y + 3, oWall))
+    if (!place_meeting(x + sign(hsp), y, collide_list) && !place_meeting(x + sign(hsp), y + 1, collide_list) && !place_meeting(x + sign(hsp), y + 2, collide_list) && place_meeting(x + sign(hsp), y + 3, collide_list))
         y += 2;
-    else if (!place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y + 1, oWall) && place_meeting(x + sign(hsp), y + 2, oWall))
+    else if (!place_meeting(x + sign(hsp), y, collide_list) && !place_meeting(x + sign(hsp), y + 1, collide_list) && place_meeting(x + sign(hsp), y + 2, collide_list))
         ++y; 
 
-    if (!place_meeting(x + sign(hsp), y, oWall))
+    if (!place_meeting(x + sign(hsp), y, collide_list))
         x += sign(hsp); 
     else {
         hsp = 0;
@@ -47,9 +47,9 @@ repeat(abs(hsp)) {
 
 
 //Vertical Collision
-if (place_meeting(x,y+vsp,oWall))
+if (place_meeting(x,y+vsp,collide_list))
 {
-	while (!place_meeting(x,y+sign(vsp),oWall))
+	while (!place_meeting(x,y+sign(vsp),collide_list))
 	{
 		y = y + sign(vsp);
 	}
@@ -64,7 +64,7 @@ if (!vsp = 0) && (key_up)
 }
 
 
-if (!place_meeting(x,y+1,oWall))
+if (!place_meeting(x,y+1,collide_list))
 {
 	sprite_index = sPlayer_Idle;
 	image_speed = 0;

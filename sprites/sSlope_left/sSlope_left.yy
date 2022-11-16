@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sSlope_left",
   "bboxMode": 0,
-  "collisionKind": 4,
+  "collisionKind": 0,
   "type": 0,
   "origin": 0,
   "preMultiplyAlpha": false,
