@@ -1,4 +1,4 @@
-
+/// @description Setting up the variables and state machines
 
 hsp = 0;
 vsp = 0;

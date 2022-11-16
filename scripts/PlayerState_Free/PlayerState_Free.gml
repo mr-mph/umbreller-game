@@ -5,16 +5,44 @@ function PlayerState_Free(){
 Walk();
 Jump();
 
-//Horizontal Collisions
-if (place_meeting(x+hsp,y,oWall))
-{
-	while (!place_meeting(x+sign(hsp),y,oWall))
-	{
-		x = x + sign(hsp);
-	}
-	hsp = 0;
+//Horizontal Collisions [ORIGINAL] 
+//if (place_meeting(x+hsp,y,oWall))
+//{
+//	while (!place_meeting(x+sign(hsp),y,oWall))
+//	{
+//		x = x + sign(hsp);
+//	}
+//	hsp = 0;
+//}
+//x = x + hsp;
+
+// Horizontal Collisions [NEW]
+repeat(abs(hsp)) {
+    // Move up slope
+    if (place_meeting(x + sign(hsp), y, oWall) && place_meeting(x + sign(hsp), y - 1, oWall) && !place_meeting(x + sign(hsp), y - 2, oWall))
+        y -= 2;
+    else if (place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y - 1, oWall))
+        --y;
+    
+    // Move down slope
+    if (!place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y + 1, oWall) && !place_meeting(x + sign(hsp), y + 2, oWall) && place_meeting(x + sign(hsp), y + 3, oWall))
+        y += 2;
+    else if (!place_meeting(x + sign(hsp), y, oWall) && !place_meeting(x + sign(hsp), y + 1, oWall) && place_meeting(x + sign(hsp), y + 2, oWall))
+        ++y; 
+
+    if (!place_meeting(x + sign(hsp), y, oWall))
+        x += sign(hsp); 
+    else {
+        hsp = 0;
+        break;
+    }
 }
-x = x + hsp;
+
+
+
+
+
+
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,oWall))
