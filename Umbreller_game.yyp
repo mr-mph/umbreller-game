@@ -1,7 +1,7 @@
 {
   "resourceType": "GMProject",
   "resourceVersion": "1.6",
-  "name": "Umbreller_log2",
+  "name": "Umbreller_game",
   "resources": [
     {"id":{"name":"PlayerState_Attack_Thrust","path":"scripts/PlayerState_Attack_Thrust/PlayerState_Attack_Thrust.yy",},"order":1,},
     {"id":{"name":"sPlayerW","path":"sprites/sPlayerW/sPlayerW.yy",},"order":2,},
