@@ -24,8 +24,6 @@ repeat(abs(hsp)) {
 	}
 }
 
-show_debug_message(hsp)
-
 //Vertical Collision
 if (place_meeting(x,y+vsp,collide_list))
 {
