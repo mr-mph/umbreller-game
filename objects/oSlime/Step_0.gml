@@ -1,4 +1,5 @@
 vsp = vsp + grv;
+hsp = walksp
 
 // Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
@@ -15,14 +16,14 @@ repeat(abs(hsp)) {
         ++y; 
 
     if (!place_meeting(x + sign(hsp), y, collide_list))
-        x += sign(hsp); 
+        x += sign(hsp);
     else {
-        hsp = 0;
-        break;
+        hsp = -hsp;
+		break;
 	}
 }
 
-
+x = x + hsp
 
 
 //Vertical Collision
