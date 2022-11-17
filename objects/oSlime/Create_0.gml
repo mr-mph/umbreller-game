@@ -3,10 +3,11 @@
 hsp = 0;
 vsp = 0;
 grv = 0.3
-walksp = 1;
+walksp = 2;
+hsp = walksp;
 
 
-collide_list = oWall
+collide_list = oWall;
 
 function OnGround(_obj)
 {

@@ -1,5 +1,5 @@
 vsp = vsp + grv;
-hsp = walksp
+
 
 // Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
@@ -19,12 +19,12 @@ repeat(abs(hsp)) {
         x += sign(hsp);
     else {
         hsp = -hsp;
+		x += sign(hsp) * 2;
 		break;
 	}
 }
 
-x = x + hsp
-
+show_debug_message(hsp)
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,collide_list))
@@ -37,25 +37,6 @@ if (place_meeting(x,y+vsp,collide_list))
 }
 y = y + vsp;
 
-/*
-if (!place_meeting(x,y+1,collide_list))
-{
-	sprite_index = sPlayer_Idle;
-	image_speed = 0;
-	if (sign(vsp) > 0) image_index = 1; else image_index = 0;
-}
-	else
-	{
-		image_speed = 1;
-		if (hsp == 0)
-		{
-		sprite_index = sPlayer_Idle;
-		}
-		else
-		{
-			sprite_index = sPlayerW;
-		}
-	}
-*/
+
 
 if (hsp != 0) image_xscale = sign(hsp)
