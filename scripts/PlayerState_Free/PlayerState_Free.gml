@@ -60,10 +60,10 @@ if (!vsp == 0) && (key_up)
 }
 
 //Animation
-if (sign(round(vsp)) < 0) {
+if (sign(floor(vsp)) < 0) {
 	sprite_index = sPlayer_Jump2
 	image_speed = 1
-} else if (sign(round(vsp)) > 0) {
+} else if (sign(floor(vsp)) > 0) {
 	if (image_index == 0 )image_speed = 1;
 	sprite_index = sPlayer_Jump3;
 	if (image_index > 3) image_speed = 0;
