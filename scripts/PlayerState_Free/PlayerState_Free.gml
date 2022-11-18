@@ -61,15 +61,14 @@ if (!vsp == 0) && (key_up)
 
 //Animation
 if (sign(vsp) < 0) {
-	show_debug_message("jumping");
 	sprite_index = sPlayer_Jump2
 	image_speed = 1
 } else if (sign(vsp) > 0) {
-	show_debug_message("falling");
 	if (image_index == 0 )image_speed = 1;
-	sprite_index = sPlayer_Jump_Down;
+	sprite_index = sPlayer_Jump3;
 	if (image_index == 3) image_speed = 0;
 } else if (hsp == 0) {
+	image_speed = 1
 	sprite_index = sPlayer_Idle;
 } else {
 	image_speed = 1
@@ -78,4 +77,5 @@ if (sign(vsp) < 0) {
 
 if (hsp != 0) image_xscale = sign(hsp);
 
+show_debug_message(image_index)
 }
