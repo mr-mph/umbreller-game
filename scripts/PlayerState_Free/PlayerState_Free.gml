@@ -1,9 +1,24 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 
 Walk();
 Jump();
 
-// Horizontal Collisions
+/*
+Horizontal Collisions [ORIGINAL] 
+if (place_meeting(x+hsp,y,collide_list))
+{
+	while (!place_meeting(x+sign(hsp),y,collide_list))
+	{
+		x = x + sign(hsp);
+	}
+	hsp = 0;
+}
+x = x + hsp;
+*/
+
+// Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
     // Move up slope
     if (place_meeting(x + sign(hsp), y, collide_list) && place_meeting(x + sign(hsp), y - 1, collide_list) && !place_meeting(x + sign(hsp), y - 2, collide_list))
@@ -26,15 +41,23 @@ repeat(abs(hsp)) {
 }
 
 
-
 //Vertical Collision
 if (place_meeting(x,y+vsp,collide_list))
 {
-	while (!place_meeting(x,y+sign(vsp),collide_list))
-	{
-		y = y + sign(vsp);
+	while (!place_meeting(x,y+sign(vsp),collide_list)) {
+		isCollidingCeiling = false;
+		if (sign(vsp)) == 1 {
+			// ground collision
+			y += 1;
+		} else if (sign(vsp) == -1) {
+			//ceiling collision
+			isCollidingCeiling = true;
+			y -= 1;
+		}
 	}
 	vsp = 0;
+} else {
+	isCollidingCeiling = false;
 }
 y = y + vsp;
 
@@ -53,15 +76,15 @@ if (sign(floor(vsp)) < 0) {
 	sprite_index = sPlayer_Jump3;
 	if (image_index > 3) image_speed = 0;
 }
-else if (hsp == 0) && (OnGround(collide_list)){
+else if (hsp == 0) && (OnGround(collide_list) && (!isCollidingCeiling)) {
 	image_speed = 1
 	sprite_index = sPlayer_Idle;
-} else if (vsp == 0){
+} else if (vsp == 0) && (!isCollidingCeiling){
 	image_speed = 1
 	sprite_index = sPlayerW;
 }
 
 if (hsp != 0) image_xscale = sign(hsp);
 
-show_debug_message(vsp)
+show_debug_message(isCollidingCeiling)
 }

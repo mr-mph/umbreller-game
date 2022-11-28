@@ -1,5 +1,6 @@
 /// @description Setting up the variables and state machines
 
+isCollidingCeiling = false;
 hsp = 0;
 vsp = 0;
 grv = 0.3
