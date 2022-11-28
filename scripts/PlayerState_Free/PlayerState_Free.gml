@@ -1,24 +1,9 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 
 Walk();
 Jump();
 
-/*
-Horizontal Collisions [ORIGINAL] 
-if (place_meeting(x+hsp,y,collide_list))
-{
-	while (!place_meeting(x+sign(hsp),y,collide_list))
-	{
-		x = x + sign(hsp);
-	}
-	hsp = 0;
-}
-x = x + hsp;
-*/
-
-// Horizontal Collisions [NEW]
+// Horizontal Collisions
 repeat(abs(hsp)) {
     // Move up slope
     if (place_meeting(x + sign(hsp), y, collide_list) && place_meeting(x + sign(hsp), y - 1, collide_list) && !place_meeting(x + sign(hsp), y - 2, collide_list))
