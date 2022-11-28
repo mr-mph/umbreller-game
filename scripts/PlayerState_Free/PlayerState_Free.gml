@@ -67,8 +67,19 @@ if (!vsp == 0) && (key_up)
 	vsp = 1
 }
 
+
+// Capture Camera Zone:
+var _zone = instance_place(x, y, oScreen);
+if (_zone != noone) {
+	if (rectangle_in_rectangle_ids(id, _zone) == 1) {
+		cam_zone = _zone;
+	}
+}
+
+
 //Animation
 if (sign(floor(vsp)) < 0) {
+	
 	sprite_index = sPlayer_Jump2
 	image_speed = 1
 } else if (sign(floor(vsp)) > 0) {
@@ -88,3 +99,4 @@ if (hsp != 0) image_xscale = sign(hsp);
 
 show_debug_message(isCollidingCeiling)
 }
+

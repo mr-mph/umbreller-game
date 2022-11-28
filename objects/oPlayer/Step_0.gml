@@ -6,6 +6,7 @@ key_jump = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("K"));
 key_jump_held = keyboard_check(ord("X")) || keyboard_check(ord("K"));
 key_attack = keyboard_check(ord("Z"));
 key_run = keyboard_check(vk_shift);
+cam_zone = noone;
 
 function Walk()
 {
@@ -32,6 +33,8 @@ function Jump()
 		vsp = -8;
 	}
 }
+
+
 
 switch (state)
 

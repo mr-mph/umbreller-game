@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oScreen1",
+  "name": "oScreen",
   "spriteId": {
     "name": "screens",
     "path": "sprites/screens/screens.yy",
