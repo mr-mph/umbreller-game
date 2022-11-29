@@ -12,6 +12,8 @@ multiplier_walk = 1;
 multiplier_run = 1.5;
 
 collide_list = oWall
+cam_zone = noone;
+
 
 function OnGround(_obj)
 {
