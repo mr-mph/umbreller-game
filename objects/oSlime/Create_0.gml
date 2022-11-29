@@ -3,7 +3,7 @@
 hsp = 0;
 vsp = 0;
 grv = 0.3
-walksp = 0;
+walksp = 1;
 hsp = walksp;
 
 

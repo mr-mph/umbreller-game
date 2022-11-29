@@ -35,9 +35,9 @@
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},"order":0,},
   ],
   "Options": [
-    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
     {"name":"Main","path":"options/main/options_main.yy",},
-    {"name":"macOS","path":"options/mac/options_mac.yy",},
+    {"name":"Windows","path":"options/windows/options_windows.yy",},
+    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
