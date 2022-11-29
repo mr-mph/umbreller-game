@@ -71,9 +71,8 @@ if (!vsp == 0) && (key_up)
 // Capture Camera Zone:
 var _zone = instance_place(x, y, oScreen);
 if (_zone != noone) {
-	if (rectangle_in_rectangle_ids(id, _zone) == 1) {
-		cam_zone = _zone;
-	}
+	cam_zone = _zone;
+
 }
 
 
