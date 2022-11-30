@@ -21,5 +21,5 @@ y = lerp(y, yTo, lerp_spd);
 
 camera_set_view_pos(cam, x, y);
 
-instance_activate_region(view_x, view_y, view_w, view_h, true);
+instance_activate_region(view_x - 64, view_y - 64, view_w + 128, view_h + 128, true);
 
