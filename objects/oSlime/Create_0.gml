@@ -3,11 +3,16 @@
 hsp = 0;
 vsp = 0;
 grv = 0.3
-walksp = 1;
-hsp = walksp;
+walksp = 0;
 
+
+hp = 3
+flash = 0
 
 collide_list = oWall;
+
+spd_inc = 1
+
 
 function OnGround(_obj)
 {

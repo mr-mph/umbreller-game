@@ -1,6 +1,10 @@
 vsp = vsp + grv;
 
 
+
+hsp = walksp;
+
+
 // Horizontal Collisions [NEW]
 repeat(abs(hsp)) {
     // Move up slope
