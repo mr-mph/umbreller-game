@@ -13,3 +13,12 @@ else if (oPlayer.hsp == 0) && (!oPlayer.isCollidingCeiling) {
 }
 
 if (oPlayer.hsp != 0) image_xscale = sign(oPlayer.hsp);
+
+
+
+x = clamp(x, oPlayer.x - 5, oPlayer.x + 5)
+y = clamp(y, oPlayer.y - 3, oPlayer.y + 3)
+
+x = lerp(x, oPlayer.x, 0.2);
+y = lerp(y, oPlayer.y, 0.4);
+
