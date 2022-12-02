@@ -74,14 +74,6 @@ if (!vsp == 0) && (key_up)
 }
 
 
-// Capture Camera Zone:
-var _zone = instance_place(x, y, oScreen);
-if (_zone != noone) {
-	cam_zone = _zone;
-
-}
-
-
 //Animation
 if (sign(floor(vsp)) < 0) {
 	
@@ -103,5 +95,6 @@ else if (hsp == 0) && (OnGround(collide_list) && (!isCollidingCeiling)) {
 if (hsp != 0) image_xscale = sign(hsp);
 
 show_debug_message(isCollidingCeiling)
-}
 
+if (key_attack) && OnGround(collide_list) state = PLAYERSTATE.ATTACK_THRUST;
+}

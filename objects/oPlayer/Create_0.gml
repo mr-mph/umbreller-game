@@ -1,5 +1,5 @@
 /// @description Setting up the variables and state machines
-
+key_attack = false;
 isCollidingCeiling = false;
 hsp = 0;
 vsp = 0;
@@ -36,7 +36,7 @@ function CoyoteTime()
 OnGround(collide_list);
 
 state = PLAYERSTATE.FREE;
-
+hitByAttack = ds_list_create();
 
 enum PLAYERSTATE
 {

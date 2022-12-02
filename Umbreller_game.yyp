@@ -5,8 +5,10 @@
   "resources": [
     {"id":{"name":"PlayerState_Attack_Thrust","path":"scripts/PlayerState_Attack_Thrust/PlayerState_Attack_Thrust.yy",},"order":1,},
     {"id":{"name":"oScreen","path":"objects/oScreen/oScreen.yy",},"order":0,},
+    {"id":{"name":"hb_thrust","path":"sprites/hb_thrust/hb_thrust.yy",},"order":16,},
     {"id":{"name":"sPlayer_Jump3","path":"sprites/sPlayer_Jump3/sPlayer_Jump3.yy",},"order":9,},
     {"id":{"name":"sPlayerW","path":"sprites/sPlayerW/sPlayerW.yy",},"order":2,},
+    {"id":{"name":"sPlayer_Thrust","path":"sprites/sPlayer_Thrust/sPlayer_Thrust.yy",},"order":15,},
     {"id":{"name":"PlayerState_Attack_Downthrust","path":"scripts/PlayerState_Attack_Downthrust/PlayerState_Attack_Downthrust.yy",},"order":2,},
     {"id":{"name":"roombg_test","path":"sprites/roombg_test/roombg_test.yy",},"order":5,},
     {"id":{"name":"screens","path":"sprites/screens/screens.yy",},"order":10,},
@@ -39,7 +41,7 @@
   "Options": [
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
     {"name":"Main","path":"options/main/options_main.yy",},
-    {"name":"macOS","path":"options/mac/options_mac.yy",},
+    {"name":"Windows","path":"options/windows/options_windows.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,

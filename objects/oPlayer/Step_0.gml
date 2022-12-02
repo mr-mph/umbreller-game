@@ -34,7 +34,11 @@ function Jump()
 	}
 }
 
+var _zone = instance_place(x, y, oScreen);
+if (_zone != noone) {
+	cam_zone = _zone;
 
+}
 
 switch (state)
 
