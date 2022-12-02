@@ -22,3 +22,20 @@ y = clamp(y, oPlayer.y - 3, oPlayer.y + 3)
 x = lerp(x, oPlayer.x, 0.2);
 y = lerp(y, oPlayer.y, 0.4);
 
+if (oPlayer.image_xscale == 1) {
+	if (place_meeting(x,y,oPlayer.collide_list)) {
+		image_angle--;
+	} else {
+		while (!place_meeting(x,y,oPlayer.collide_list) && oPlayer.OnGround(oPlayer.collide_list)) {
+			image_angle++;
+		}
+	}
+} else {
+	if (place_meeting(x,y,oPlayer.collide_list)) {
+		image_angle++;
+	} else {
+		while (!place_meeting(x,y,oPlayer.collide_list ) && oPlayer.OnGround(oPlayer.collide_list)) {
+			image_angle--;
+		}
+	}
+}
