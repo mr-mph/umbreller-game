@@ -39,3 +39,5 @@ if (oPlayer.image_xscale == 1) {
 		}
 	}
 }
+
+visible = oPlayer.umbrella_show

@@ -1,5 +1,6 @@
 /// @description Setting up the variables and state machines
-key_attack = false;
+
+umbrella_show = true;
 isCollidingCeiling = false;
 hsp = 0;
 vsp = 0;

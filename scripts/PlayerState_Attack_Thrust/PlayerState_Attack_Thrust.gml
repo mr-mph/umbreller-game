@@ -10,6 +10,7 @@ if (sprite_index != sPlayer_Thrust)
 	sprite_index = sPlayer_Thrust;
 	image_index = 0;
 	ds_list_clear(hitByAttack);
+	umbrella_show = false
 }
 
 // Check for hits
@@ -28,7 +29,7 @@ if (hits > 0)
 			ds_list_add(hitByAttack, hitID);
 			with(hitID)
 			{
-				//ENEMY DAMAGE ANIMATIONS
+				//ENEMY DAMAGE CODE
 			}
 		}
 	}
@@ -39,7 +40,10 @@ mask_index = sPlayer_Idle
 if (animation_end())
 {
 	sprite_index = sPlayer_Idle
+	umbrella_show = true
 	state = PLAYERSTATE.FREE
 
 }
+
+
 }
