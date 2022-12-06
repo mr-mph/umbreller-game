@@ -2,9 +2,9 @@ key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-key_jump = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("K"));
-key_jump_held = keyboard_check(ord("X")) || keyboard_check(ord("K"));
-key_attack = keyboard_check(ord("Z"));
+key_jump = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("H"));
+key_jump_held = keyboard_check(ord("X")) || keyboard_check(ord("H"));
+key_attack = keyboard_check_pressed(ord("Z"));
 key_run = keyboard_check(vk_shift);
 cam_zone = noone;
 
