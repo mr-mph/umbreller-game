@@ -5,7 +5,6 @@ vsp = 0;
 grv = 0.3
 walksp = 0;
 
-
 hp = 3
 flash = 0
 
@@ -24,3 +23,12 @@ function OnGround(_obj)
 }
 
 OnGround(collide_list);
+
+state = ENEMYSTATE.FREE
+
+enum ENEMYSTATE
+{
+	FREE,
+	HIT,
+	DEAD
+}
